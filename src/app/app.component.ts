@@ -11,3 +11,8 @@ export class AppComponent {
 
 
 //addeventlistener
+// function preloadImage()
+// {
+//     var img=new Image();
+//     img.src='../assets/images/bg (10).jpg';
+// }

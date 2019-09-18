@@ -58,10 +58,9 @@
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
-    animation: slide 300s;
+    animation: slide 400s;
     animation-iteration-count: infinite;
     position: fixed;
-    background-image: radial-gradient(blue,black);
     font-family: caviarDreams;
   }
 
@@ -149,9 +148,11 @@
 }
 
 .titles{
-  left: 50%;
   width: 50%;
-  text-align: center;
+  left: 50%;
+  transform: translate(-50%,0%);
+  position: fixed;
+
 }
 
 .titles a {
