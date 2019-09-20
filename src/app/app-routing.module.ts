@@ -4,6 +4,7 @@ import { MoviesComponent } from './movies/movies.component';
 import { TvShowComponent } from './tv-show/tv-show.component';
 import { ActorsComponent } from './actors/actors.component';
 import { RandomComponent } from './random/random.component';
+import { IndexComponent } from './index/index.component';
 
 
 const routes: Routes = [
@@ -22,6 +23,10 @@ const routes: Routes = [
   {
     path: 'random',
     component: RandomComponent,
+  },
+  {
+    path: '',
+    component: IndexComponent,
   }
 
 
