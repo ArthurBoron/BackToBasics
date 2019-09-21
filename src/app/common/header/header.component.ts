@@ -20,6 +20,7 @@ export class HeaderComponent implements OnInit {
     }
     this.movieService.searchMovie(this.movie).subscribe(data => {
       this.el.nativeElement.style.visibility = 'visible';
+      // tslint:disable-next-line: no-string-literal
       this.searchResult = data['results'];
     });
   }

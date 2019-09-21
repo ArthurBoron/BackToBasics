@@ -11,8 +11,9 @@ export class TvShowsComponent implements OnInit {
   filteredTrendingMovies: any;
 
   constructor(public tvShowService: TvShowService) {
-    // Get trending movies
+    // Get trending tv Shows
     this.tvShowService.getTrendingTvShows().subscribe(data => {
+      // tslint:disable-next-line: no-string-literal
       this.trendingTvShows = data['results'];
     });
   }
