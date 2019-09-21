@@ -1,0 +1,20 @@
+<div class="container">
+  <div class="image-card-container">
+    <img
+      src="https://image.tmdb.org/t/p/w500{{ movie?.profile_path }}"
+      alt="{{ movie?.title }}"
+    />
+  </div>
+  <div class="details-container">
+    <h1 class="movie-title">{{ movie?.name }}</h1>
+    <div class="release-details-container">
+      <div class="release-year-container">
+        Birthday: <br />
+        <span class="release-year">{{ movie?.birthday }}</span>
+      </div>
+    </div>
+    <p class="overview">{{ movie?.biography }}</p>
+    
+  </div>
+</div>
+  

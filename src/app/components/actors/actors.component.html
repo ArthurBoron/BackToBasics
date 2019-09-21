@@ -1,1 +1,15 @@
-<p>actors works!</p>
+<mat-card
+  class="movie-card"
+  *ngFor="let movie of popularActors"
+  routerLink="/actors/{{ movie.id }}"
+>
+  <img
+    mat-card-image
+    src="https://image.tmdb.org/t/p/w500{{ movie?.profile_path }}"
+    alt=""
+  />
+  <mat-card-content>
+    <h6 class="movie-title">{{ movie?.name }}</h6>
+  </mat-card-content>
+</mat-card>
+

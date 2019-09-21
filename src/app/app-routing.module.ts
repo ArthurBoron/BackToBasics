@@ -5,6 +5,8 @@ import { MoviesCardComponent } from './components/movie-card/movie-card.componen
 import { HomeComponent } from './components/home/home.component';
 import { TvShowsComponent } from './components/tv-shows/tv-shows.component';
 import { TvShowCardComponent } from './components/tv-show-card/tv-show-card.component';
+import { ActorsComponent } from './components/actors/actors.component';
+import { ActorCardComponent } from './components/actor-card/actor-card.component';
 
 const routes: Routes = [
   {
@@ -14,6 +16,10 @@ const routes: Routes = [
   {
     path: 'tvShows',
     component: TvShowsComponent
+  },
+  {
+    path: 'actors',
+    component: ActorsComponent
   },
   {
     path: 'home',
@@ -31,6 +37,10 @@ const routes: Routes = [
   {
     path: 'tvShows/:movieID',
     component: TvShowCardComponent
+  },
+  {
+    path: 'actors/:movieID',
+    component: ActorCardComponent
   }
 ];
 
