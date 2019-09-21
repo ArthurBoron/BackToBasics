@@ -1,0 +1,28 @@
+<div class="container">
+    <div class="image-card-container">
+      <img
+        src="https://image.tmdb.org/t/p/w500{{ movie?.poster_path }}"
+        alt="{{ movie?.title }}"
+      />
+    </div>
+    <div class="details-container">
+      <h1 class="movie-title">{{ movie?.name }}</h1>
+      <p class="overview">{{ movie?.overview }}</p>
+      <p class="genres">{{ genres?.join(', ') }}</p>
+      <div class="release-details-container">
+        <div class="release-year-container">
+          Last Air Date: <br />
+          <span class="release-year">{{ movie?.last_air_date }}</span>
+        </div>
+        <div class="runtime-container">
+          Season: <br />
+          <span class="runtime">{{ movie?.number_of_seasons }}</span>
+        </div>
+        <div class="cast-container">
+          Cast: <br />
+          <span class="cast">{{ filteredCast?.join(', ') }}</span>
+        </div>
+      </div>
+    </div>
+  </div>
+  

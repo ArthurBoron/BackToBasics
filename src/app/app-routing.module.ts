@@ -1,37 +1,37 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
-import { MoviesComponent } from './movies/movies.component';
-import { TvShowComponent } from './tv-show/tv-show.component';
-import { ActorsComponent } from './actors/actors.component';
-import { RandomComponent } from './random/random.component';
-import { IndexComponent } from './index/index.component';
-
+import { MoviesComponent } from './components/movies/movies.component';
+import { MoviesCardComponent } from './components/movie-card/movie-card.component';
+import { HomeComponent } from './components/home/home.component';
+import { TvShowsComponent } from './components/tv-shows/tv-shows.component';
+import { TvShowCardComponent } from './components/tv-show-card/tv-show-card.component';
 
 const routes: Routes = [
   {
     path: 'movies',
-    component: MoviesComponent,
+    component: MoviesComponent
   },
   {
-    path: 'tvShow',
-    component: TvShowComponent,
+    path: 'tvShows',
+    component: TvShowsComponent
   },
   {
-    path: 'actors',
-    component: ActorsComponent,
-  },
-  {
-    path: 'random',
-    component: RandomComponent,
+    path: 'home',
+    component: HomeComponent
   },
   {
     path: '',
-    component: IndexComponent,
+    redirectTo: '/home',
+    pathMatch: 'full'
+  },
+  {
+    path: 'movies/:movieID',
+    component: MoviesCardComponent
+  },
+  {
+    path: 'tvShows/:movieID',
+    component: TvShowCardComponent
   }
-
-
-
-
 ];
 
 @NgModule({

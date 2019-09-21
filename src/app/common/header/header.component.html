@@ -1,0 +1,28 @@
+<div class="toolbar" role="banner">
+    <img routerLink="/" class="logoLight" src="assets/logo light.png"/>
+    <h1 routerLink="/">Back To Basics</h1>
+    <div class="titles">
+      <a routerLink="/movies">Movies</a>
+      <a routerLink="/tvShows">TV Show</a>
+      <a routerLink="/actors">Actors</a>
+      <a routerLink="/random">Random</a>
+    </div>
+    <div class="searchBar">
+      <input type="text"
+      placeholder="Search Movies By Title"
+      name="movie"
+      [(ngModel)]="movie"
+      (ngModelChange)="searchMovies()">
+      <div class="state-container-dropdown" #closeDropdown>
+          <a
+            class="state"
+            *ngFor="let movie of searchResult; let i = index"
+            routerLink="/movies/{{ movie.id }}"
+            (click)="hideDropdown()"
+          >
+            {{ movie.title }}
+          </a>
+        </div>
+    </div>
+  </div>
+  
