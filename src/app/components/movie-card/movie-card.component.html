@@ -1,0 +1,28 @@
+<div class="container">
+    <div class="image-card-container">
+      <img
+        src="https://image.tmdb.org/t/p/w500{{ movie?.poster_path }}"
+        alt="{{ movie?.title }}"
+      />
+    </div>
+    <div class="details-container">
+      <h1 class="movie-title">{{ movie?.title }}</h1>
+      <p class="overview">{{ movie?.overview }}</p>
+      <p class="genres">{{ genres?.join(', ') }}</p>
+      <div class="release-details-container">
+        <div class="release-year-container">
+          Release Date: <br />
+          <span class="release-year">{{ movie?.release_date }}</span>
+        </div>
+        <div class="runtime-container">
+          Runtime: <br />
+          <span class="runtime">{{ movie?.runtime }} mins</span>
+        </div>
+        <div class="cast-container">
+          Cast: <br />
+          <span class="cast">{{ filteredCast?.join(', ') }}</span>
+        </div>
+      </div>
+    </div>
+  </div>
+  

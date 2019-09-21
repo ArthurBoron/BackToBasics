@@ -1,0 +1,23 @@
+<div class="content" role="main">
+</div>
+
+<div class="content2">
+  <img class="logo" src="assets/logo.png"/>
+  <div class="topnav">
+	<input type="text"
+	placeholder="Search for a Movie, a TV Show, an actor ..."
+	name="movie"
+  [(ngModel)]="movie"
+  (ngModelChange)="searchMovies()">
+  </div>
+  <div class="state-container-dropdown" #closeDropdown>
+	  <a
+		class="state"
+		*ngFor="let movie of searchResult; let i = index"
+		routerLink="/movies/{{ movie.id }}"
+		(click)="hideDropdown()"
+	  >
+		{{ movie.title }}
+	  </a>
+	</div>
+</div>

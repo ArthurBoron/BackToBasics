@@ -1,0 +1,15 @@
+<mat-card
+  class="movie-card"
+  *ngFor="let movie of trendingTvShows"
+  routerLink="/tvShows/{{ movie.id }}"
+>
+  <img
+    mat-card-image
+    src="https://image.tmdb.org/t/p/w500{{ movie?.poster_path }}"
+    alt=""
+  />
+  <mat-card-content>
+    <h6 class="movie-title">{{ movie?.name }}</h6>
+  </mat-card-content>
+</mat-card>
+
