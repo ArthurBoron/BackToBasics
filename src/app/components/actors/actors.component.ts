@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { ActorService } from 'src/app/services/actor.service';
 
 @Component({
   selector: 'app-actors',
@@ -7,9 +8,16 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ActorsComponent implements OnInit {
 
-  constructor() { }
+  popularActors: any;
+  filteredPopularActors: any;
 
-  ngOnInit() {
+  constructor(public actorService: ActorService) {
+    // Get trending movies
+    this.actorService.getPopularActors().subscribe(data => {
+      this.popularActors = data['results'];
+    });
   }
+
+  ngOnInit() {}
 
 }
