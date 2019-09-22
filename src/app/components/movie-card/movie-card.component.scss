@@ -2,39 +2,40 @@
   margin-left: 6%;
   margin-top:6%;
   position: absolute;
+  background-color: black;
 }
 
 
 .image-card-container {
-  width: 400px;
-  height: 550px;
-  margin-top: 3em;
-  float: left;
+  position: fixed;
+  right: 50%;
+  top: 10%;
+  height: 90%;
 }
 
 .details-container {
-  margin-top: 2.5em;
-  width: 560px;
-  float: left;
+  width: 30%;
+  left: 50%;
+  position: fixed;
 }
 
 img {
-  max-width: 100%;
-  max-height: 100%;
+  height: 100%;
   object-fit: cover;
 }
 
 .movie-title {
-  color: black;
+  color: #bf7706;
   margin-left: 1.1em;
   display: inline-block;
   font-size: 2.5em;
   letter-spacing: 2px;
   font-weight: 500;
+  font-family: caviarDreams;
 }
 
 .overview {
-  color: black;
+  color: #f1e6d5;
   display: inline-table;
   font-weight: 300;
   margin-left: 2.9em;
@@ -48,6 +49,7 @@ img {
   font-weight: 300;
   margin-left: 2em;
   font-size: 1.4em;
+  font-family: caviarDreams;
 }
 
 .release-details-container {
@@ -56,10 +58,11 @@ img {
 }
 
 .release-year-container {
-  color: black;
+  color: #f1e6d5;
   margin-left: 2em;
   font-size: 1.4em;
   float: left;
+  font-family: caviarDreams;
 }
 
 .release-year {
@@ -71,10 +74,11 @@ img {
 }
 
 .runtime-container {
-  color: black;
+  color: #f1e6d5;
   float: left;
   margin-left: 9em;
   font-size: 1.4em;
+  font-family: caviarDreams;
 }
 
 .runtime {
@@ -85,11 +89,12 @@ img {
 }
 
 .cast-container {
-  color: black;
+  color: #f1e6d5;
   margin-left: 2em;
   font-size: 1.4em;
   display: inline-block;
   margin-top: 1.3em;
+  font-family: caviarDreams;
 }
 
 .cast {
@@ -98,3 +103,12 @@ img {
   font-size: 0.9em;
 }
 
+.blackGrandiant{
+  background-image: url(../../../assets/images/blackGradient.png);
+  background-repeat: repeat-y;
+  height: 100%;
+  width: 100%;
+  left: 0;
+  top: 10%;
+  position: fixed;
+}
