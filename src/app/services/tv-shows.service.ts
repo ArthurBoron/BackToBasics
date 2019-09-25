@@ -11,8 +11,8 @@ export class TvShowService {
 
   constructor(public http: HttpClient) { }
 
-  getTrendingTvShows() {
-    return this.http.get(`${this.tvShowUrl}tv/on_the_air?api_key=${this.apiKey}&language=en-US`);
+  getTrendingTvShows(page: number) {
+    return this.http.get(`${this.tvShowUrl}tv/on_the_air?api_key=${this.apiKey}&language=en-US&page=${page}`);
   }
 
   getTvShow(id: number) {
