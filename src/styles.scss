@@ -1,1 +1,11 @@
 /* You can add global styles to this file, and also import other style files */
+body{
+    background-color: #392e1d;
+}
+
+h1:focus,
+img:focus,
+input:focus,
+mat-card:focus{
+    outline: none;
+}

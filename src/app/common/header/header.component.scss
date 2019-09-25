@@ -16,7 +16,7 @@
 }
 
 .state:hover {
-  background: #00fc87;
+  background: #bf7706;
   cursor: pointer;
 }
 
@@ -28,6 +28,16 @@ h5,
 h6 {
   margin: 8px 0;
   font-family: caviarDreams;
+}
+
+.backToHome:hover{
+  animation: changeTextColor 0.5s;
+  color: #bf7706;
+}
+
+@keyframes changeTextColor {
+  0% {color: #f1e6d5}
+  100% {color: #bf7706}
 }
 
 .p {
@@ -57,6 +67,7 @@ h6 {
   position: absolute;
   font-family: caviarDreams;
   font-size: 2em;
+  box-shadow: 0px 0px 10px 0px #000000;
 }
 
 
@@ -88,8 +99,29 @@ h6 {
   border-style: solid;
   color: #392e1d;
   background-color: #f1e6d5;
+  width: 25%;
 }
 
+input{
+  width: 100%;
+}
+
+.searchBar:hover{
+  border: #f1e6d5;
+  border-style: solid;
+}
+
+.searchBar input:hover{
+  background-color: #bf7706;
+  color: #f1e6d5;
+  animation: changeSearchColor 0.5s;
+}
+
+
+@keyframes changeSearchColor {
+  100% {background-color: #bf7706}
+  0% {background-color: #f1e6d5;}
+}
 
 .titles {
   width: 50%;
@@ -107,13 +139,19 @@ h6 {
 
 
 .titles a:hover {
-  padding: 5%;
   color: #f1e6d5;
+  text-decoration: none;
+  animation: changeTextColorTitle 0.5s;
 }
 
 
+@keyframes changeTextColorTitle {
+  100% {color: #f1e6d5}
+  0% {color: #bf7706}
+}
+
 .logoLight {
-  height: 80%
+  height: 80%;
 }
 
   
