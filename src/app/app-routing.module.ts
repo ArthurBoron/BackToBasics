@@ -10,15 +10,15 @@ import { ActorCardComponent } from './components/actor-card/actor-card.component
 
 const routes: Routes = [
   {
-    path: 'movies',
+    path: 'movie',
     component: MoviesComponent
   },
   {
-    path: 'tvShows',
+    path: 'tv',
     component: TvShowsComponent
   },
   {
-    path: 'actors',
+    path: 'person',
     component: ActorsComponent
   },
   {
@@ -31,15 +31,15 @@ const routes: Routes = [
     pathMatch: 'full'
   },
   {
-    path: 'movies/:movieID',
+    path: 'movie/:movieID',
     component: MoviesCardComponent
   },
   {
-    path: 'tvShows/:movieID',
+    path: 'tv/:movieID',
     component: TvShowCardComponent
   },
   {
-    path: 'actors/:movieID',
+    path: 'person/:movieID',
     component: ActorCardComponent
   }
 ];

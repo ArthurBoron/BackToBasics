@@ -4,15 +4,18 @@ import { HttpClient } from '@angular/common/http';
 @Injectable({
   providedIn: 'root'
 })
-export class MovieService {
+export class SearchService {
 
   private movie_url = 'https://api.themoviedb.org/3/';
   private api_key = '52f8b1f1fd9b853d910f3fb53654d48c';
+  private search_string: string;
 
   constructor(public http: HttpClient) { }
 
-  getTrendingMovies() {
-    return this.http.get(`${this.movie_url}movie/now_playing?api_key=${this.api_key}&language=en-US`);
+  searchMovie(movie: string) {
+    this.search_string = movie;
+    // tslint:disable-next-line:max-line-length
+    return this.http.get(`${this.movie_url}search/multi?query=${this.search_string}&api_key=${this.api_key}&language=en-US&include_adult=false`);
   }
 
   getMovie(id: number) {

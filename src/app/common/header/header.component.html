@@ -2,9 +2,9 @@
     <img routerLink="/" class="logoLight" src="assets/logo light.png"/>
     <h1 routerLink="/">Back To Basics</h1>
     <div class="titles">
-      <a routerLink="/movies">Movies</a>
-      <a routerLink="/tvShows">TV Show</a>
-      <a routerLink="/actors">Actors</a>
+      <a routerLink="/movie">Movies</a>
+      <a routerLink="/tv">TV Show</a>
+      <a routerLink="/person">Actors</a>
       <a routerLink="/random">Random</a>
     </div>
     <div class="searchBar">
@@ -17,10 +17,11 @@
           <a
             class="state"
             *ngFor="let movie of searchResult; let i = index"
-            routerLink="/movies/{{ movie.id }}"
+            routerLink="/{{movie.media_type}}/{{movie.id}}"
             (click)="hideDropdown()"
           >
-            {{ movie.title }}
+            {{ movie?.title }}
+            {{ movie?.name }}
           </a>
         </div>
     </div>

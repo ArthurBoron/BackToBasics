@@ -8,15 +8,8 @@ export class TvShowService {
 
   private tvShow_url = 'https://api.themoviedb.org/3/';
   private api_key = '52f8b1f1fd9b853d910f3fb53654d48c';
-  private tvShow_string: string;
 
   constructor(public http: HttpClient) { }
-
-  searchMovie(tvShow: string) {
-    this.tvShow_string = tvShow;
-    // tslint:disable-next-line:max-line-length
-    return this.http.get(`${this.tvShow_url}search/movie?query=${this.tvShow_string}&api_key=${this.api_key}&language=en-US&include_adult=false`);
-  }
 
   getTrendingTvShows() {
     return this.http.get(`${this.tvShow_url}tv/on_the_air?api_key=${this.api_key}&language=en-US`);
