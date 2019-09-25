@@ -11,8 +11,8 @@ export class MovieService {
 
   constructor(public http: HttpClient) { }
 
-  getTrendingMovies() {
-    return this.http.get(`${this.movieUrl}movie/now_playing?api_key=${this.apiKey}&language=en-US`);
+  getTrendingMovies(page: number) {
+    return this.http.get(`${this.movieUrl}movie/now_playing?api_key=${this.apiKey}&language=en-US&page=${page}`);
   }
 
   getMovie(id: number) {

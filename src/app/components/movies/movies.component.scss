@@ -18,4 +18,24 @@ h6{
   color: #bf7706;
 }
 
+.container {
+  text-align: center;
+}
+.container ul {
+  border: 2px solid #bf7706;
+  display: inline-block;
+  margin: 10px 0;
+  padding: 2px;
+}
+.container li {
+  display: inline-block;
+}
+.container li a {
+  display: inline-block;
+  background: white;
+  color: #bf7706;
+  padding: 5px;
+  text-decoration: none;
+}
+
 

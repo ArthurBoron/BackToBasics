@@ -1,5 +1,6 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, AfterContentChecked, OnDestroy } from '@angular/core';
 import { MovieService } from '../../services/movie.service';
+import { ActivatedRoute } from '@angular/router';
 
 @Component({
   selector: 'app-movies',
@@ -10,12 +11,17 @@ export class MoviesComponent implements OnInit {
   trendingMovies: any;
   filteredTrendingMovies: any;
 
-  constructor(public movieService: MovieService) {
-    // Get trending movies
-    this.movieService.getTrendingMovies().subscribe(data => {
+  constructor(private activeRoute: ActivatedRoute, private movieService: MovieService) {
+    this.movieService.getTrendingMovies(1).subscribe(data => {
       this.trendingMovies = data['results'];
     });
   }
 
-  ngOnInit() {}
+  ngOnInit() {
+    this.activeRoute.queryParams.subscribe(queryParams => {
+      this.movieService.getTrendingMovies(queryParams.page).subscribe(data => {
+        this.trendingMovies = data['results'];
+      });
+    });
+  }
 }
