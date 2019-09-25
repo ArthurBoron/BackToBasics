@@ -14,10 +14,11 @@
 	  <a
 		class="state"
 		*ngFor="let movie of searchResult; let i = index"
-		routerLink="/movies/{{ movie.id }}"
+		routerLink="/{{movie.media_type}}/{{ movie.id }}"
 		(click)="hideDropdown()"
 	  >
-		{{ movie.title }}
+		{{ movie?.title }}
+		{{ movie?.name }}
 	  </a>
 	</div>
 </div>

@@ -1,5 +1,6 @@
 import { Component, OnInit, ViewChild, ElementRef } from '@angular/core';
-import { MovieService } from 'src/app/services/movie.service';
+import { SearchService } from 'src/app/services/search.service';
+import { RouterLink } from '@angular/router';
 
 @Component({
   selector: 'app-header',
@@ -12,13 +13,13 @@ export class HeaderComponent implements OnInit {
 
   @ViewChild('closeDropdown', { static: true }) el: ElementRef; // Getting access to the dom element through ViewChild
 
-  constructor(public movieService: MovieService) {}
+  constructor(public searchService: SearchService) {}
 
   searchMovies() {
     if (this.movie === '') {
       this.el.nativeElement.style.visibility = 'hidden';
     }
-    this.movieService.searchMovie(this.movie).subscribe(data => {
+    this.searchService.searchMovie(this.movie).subscribe(data => {
       this.el.nativeElement.style.visibility = 'visible';
       // tslint:disable-next-line: no-string-literal
       this.searchResult = data['results'];
