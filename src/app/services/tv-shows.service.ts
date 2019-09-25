@@ -6,20 +6,20 @@ import { HttpClient } from '@angular/common/http';
 })
 export class TvShowService {
 
-  private tvShow_url = 'https://api.themoviedb.org/3/';
-  private api_key = '52f8b1f1fd9b853d910f3fb53654d48c';
+  private tvShowUrl = 'https://api.themoviedb.org/3/';
+  private apiKey = '52f8b1f1fd9b853d910f3fb53654d48c';
 
   constructor(public http: HttpClient) { }
 
   getTrendingTvShows() {
-    return this.http.get(`${this.tvShow_url}tv/on_the_air?api_key=${this.api_key}&language=en-US`);
+    return this.http.get(`${this.tvShowUrl}tv/on_the_air?api_key=${this.apiKey}&language=en-US`);
   }
 
   getTvShow(id: number) {
-    return this.http.get(`${this.tvShow_url}tv/${id}?api_key=${this.api_key}&language=en-US`);
+    return this.http.get(`${this.tvShowUrl}tv/${id}?api_key=${this.apiKey}&language=en-US`);
   }
 
   getCredits(id: number) {
-    return this.http.get(`${this.tvShow_url}tv/${id}/credits?api_key=${this.api_key}`);
+    return this.http.get(`${this.tvShowUrl}tv/${id}/credits?api_key=${this.apiKey}`);
   }
 }
