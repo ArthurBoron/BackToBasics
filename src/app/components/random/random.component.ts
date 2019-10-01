@@ -17,9 +17,6 @@ export class RandomComponent implements OnInit {
   filteredCast: any;
 
   constructor(public http: HttpClient, public randomService: RandomService) {
-   }
-
-  ngOnInit() {
     this.randomService.getTrendingMovies(this.randomIntFromInterval(1, 7)).subscribe(data => {
       const randomMovie = this.randomIntFromInterval(0, 19);
       this.trendingMovies = data['results'][randomMovie];
@@ -35,18 +32,19 @@ export class RandomComponent implements OnInit {
         this.filteredCast = this.credits.cast.slice(0, 4).map(el => el.name); // Getting only the first 4 cast members and storing them in a new array
       });
     });
-    
-  }
+   }
 
-  closeAd(){
+  ngOnInit() {}
+
+  closeAd() {
     document.getElementById('close').style.height = '0%';
   }
 
-  openAd(){
+  openAd() {
     document.getElementById('close').style.height = '61%';
   }
 
-  randomIntFromInterval(min, max) { // min and max included 
+  randomIntFromInterval(min, max) { // min and max included
     return Math.floor(Math.random() * (max - min + 1) + min);
   }
 
