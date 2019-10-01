@@ -11,8 +11,8 @@ export class ActorService {
 
   constructor(public http: HttpClient) { }
 
-  getPopularActors() {
-    return this.http.get(`${this.actorUrl}person/popular?api_key=${this.apiKey}&language=en-US`);
+  getPopularActors(page: number) {
+    return this.http.get(`${this.actorUrl}person/popular?api_key=${this.apiKey}&language=en-US&page=${page}`);
   }
 
   getActor(id: number) {

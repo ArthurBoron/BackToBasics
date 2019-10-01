@@ -1,3 +1,14 @@
+<div class="genres">
+  <form name="selectGenre">
+  <select name="my_html_select_box"
+  (change)=routeGenre()>
+    <option>All genres</option>
+    <option
+    *ngFor="let genres of genres">{{genres?.name}} </option>  
+  </select>
+</form>
+</div>
+
 <mat-card
   class="movie-card"
   *ngFor="let movie of trendingMovies"
@@ -12,3 +23,13 @@
     <h6 class="movie-title">{{ movie?.title }}</h6>
   </mat-card-content>
 </mat-card>
+
+<div class="container">
+  <ul>
+      <li><button (click)=goTopAndChangePage(1)>1</button></li>
+      <li><button (click)=goTopAndChangePage(2)>2</button></li>
+      <li><button (click)=goTopAndChangePage(3)>3</button></li>
+      <li><button (click)=goTopAndChangePage(4)>4</button></li>
+      <li><button (click)=goTopAndChangePage(5)>5</button></li>
+  </ul>
+</div>

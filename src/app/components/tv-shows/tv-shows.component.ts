@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { TvShowService } from 'src/app/services/tv-shows.service';
+import { ActivatedRoute } from '@angular/router';
 
 @Component({
   selector: 'app-tv-shows',
@@ -7,18 +8,22 @@ import { TvShowService } from 'src/app/services/tv-shows.service';
   styleUrls: ['./tv-shows.component.scss']
 })
 export class TvShowsComponent implements OnInit {
+
   trendingTvShows: any;
   filteredTrendingMovies: any;
 
-  constructor(public tvShowService: TvShowService) {
-    // Get trending tv Shows
-    this.tvShowService.getTrendingTvShows().subscribe(data => {
-      // tslint:disable-next-line: no-string-literal
+  constructor(private activeRoute: ActivatedRoute, private tvShowService: TvShowService) {
+    this.tvShowService.getTrendingTvShows(1).subscribe(data => {
       this.trendingTvShows = data['results'];
     });
   }
 
-    ngOnInit() {
-    }
+  ngOnInit() {
+    this.activeRoute.queryParams.subscribe(queryParams => {
+      this.tvShowService.getTrendingTvShows(queryParams.page).subscribe(data => {
+        this.trendingTvShows = data['results'];
+      });
+    });
+  }
 
 }
