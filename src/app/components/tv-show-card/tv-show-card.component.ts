@@ -5,7 +5,7 @@ import { TvShowService } from 'src/app/services/tv-shows.service';
 @Component({
   selector: 'app-tv-show-card',
   templateUrl: './tv-show-card.component.html',
-  styleUrls: ['./tv-show-card.component.scss']
+  styleUrls: ['../movie-card/movie-card.component.scss']
 })
 export class TvShowCardComponent implements OnInit {
 

@@ -5,7 +5,7 @@ import { ActorService } from 'src/app/services/actor.service';
 @Component({
   selector: 'app-actor-card',
   templateUrl: './actor-card.component.html',
-  styleUrls: ['./actor-card.component.scss']
+  styleUrls: ['../movie-card/movie-card.component.scss']
 })
 export class ActorCardComponent implements OnInit {
   movie: any;
