@@ -17,9 +17,11 @@ export class MovieService {
 
   getTrendingMovies(page: number, genre: number) {
     if (genre === -1) {
-      return this.http.get(`${this.movieUrl}discover/movie?api_key=${this.apiKey}&language=en-US&page=${page}`);
+      // tslint:disable-next-line: max-line-length
+      return this.http.get(`${this.movieUrl}discover/movie?api_key=${this.apiKey}&language=en-US&page=${page}&primary_release_date.lte=1965-01-01`);
     } else {
-      return this.http.get(`${this.movieUrl}discover/movie?api_key=${this.apiKey}&language=en-US&page=${page}&with_genres=${genre}`);
+      // tslint:disable-next-line: max-line-length
+      return this.http.get(`${this.movieUrl}discover/movie?api_key=${this.apiKey}&language=en-US&page=${page}&with_genres=${genre}&primary_release_date.lte=1965-01-01`);
     }
   }
 
