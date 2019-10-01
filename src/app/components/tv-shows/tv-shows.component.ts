@@ -5,7 +5,7 @@ import { ActivatedRoute } from '@angular/router';
 @Component({
   selector: 'app-tv-shows',
   templateUrl: './tv-shows.component.html',
-  styleUrls: ['./tv-shows.component.scss']
+  styleUrls: ['../movies/movies.component.scss']
 })
 export class TvShowsComponent implements OnInit {
 
