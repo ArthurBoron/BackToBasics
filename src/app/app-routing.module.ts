@@ -7,6 +7,7 @@ import { TvShowsComponent } from './components/tv-shows/tv-shows.component';
 import { TvShowCardComponent } from './components/tv-show-card/tv-show-card.component';
 import { ActorsComponent } from './components/actors/actors.component';
 import { ActorCardComponent } from './components/actor-card/actor-card.component';
+import { RandomComponent } from './components/random/random.component';
 
 const routes: Routes = [
   {
@@ -20,6 +21,10 @@ const routes: Routes = [
   {
     path: 'person',
     component: ActorsComponent
+  },
+  {
+    path: 'random',
+    component: RandomComponent
   },
   {
     path: 'home',

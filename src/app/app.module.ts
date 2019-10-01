@@ -16,10 +16,11 @@ import { MoviesCardComponent } from './components/movie-card/movie-card.componen
 import { HomeComponent } from './components/home/home.component';
 import { TvShowsComponent } from './components/tv-shows/tv-shows.component';
 import { TvShowCardComponent } from './components/tv-show-card/tv-show-card.component';
+import { RandomComponent } from './components/random/random.component';
 
 @NgModule({
   declarations: [AppComponent, HeaderComponent, ActorsComponent, ActorCardComponent,
-    MoviesComponent, MoviesCardComponent,
+    MoviesComponent, MoviesCardComponent, RandomComponent,
     HomeComponent, TvShowsComponent, TvShowCardComponent],
   imports: [
     BrowserModule,

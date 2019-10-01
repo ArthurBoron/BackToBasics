@@ -30,6 +30,17 @@ export class HomeComponent implements OnInit {
     this.el.nativeElement.style.visibility = 'hidden';
   }
 
-  ngOnInit() {}
+  ngOnInit() {
+    this.pickBackgroundImage();
+  }
+
+  randomIntFromInterval(min: number, max: number) { // min and max included
+    return Math.floor(Math.random() * (max - min + 1) + min);
+  }
+
+  pickBackgroundImage() {
+    const rand = this.randomIntFromInterval(1, 52);
+    document.getElementById('randPicture').style.backgroundImage = 'url("assets/images/bg(' + rand + ').jpg")';
+  }
 
 }
