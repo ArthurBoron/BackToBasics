@@ -61,7 +61,12 @@ export class MoviesComponent implements OnInit {
     return id;
   }
 
-  goTop() {
+  goTopAndChangePage(pageToJoin: number) {
     window.scrollTo(0, 0);
+    this.activeRoute.queryParams.subscribe(queryParams => {
+      const genreChosen = this.getNameOfGenreDependingOnUrl();
+      console.log(genreChosen);
+      this.router.navigate(['/movie'], { queryParams: { page: pageToJoin, genre: genreChosen }});
+    });
   }
 }
