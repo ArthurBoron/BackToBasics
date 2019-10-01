@@ -34,7 +34,7 @@ export class MoviesComponent implements OnInit {
   }
 
   routeGenre() {
-    const selectElem = document.getElementsByName('my_html_select_box');
+    const selectElem = document.getElementsByName('my_html_select_box') as unknown as HTMLElement;
     const selectElemTest = selectElem[0].selectedIndex;
     let valueOfSelected = selectElem[0][selectElemTest].innerHTML;
     if (valueOfSelected.endsWith(' ')) {
