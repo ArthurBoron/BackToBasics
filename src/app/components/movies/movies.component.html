@@ -14,11 +14,13 @@
   *ngFor="let movie of trendingMovies"
   routerLink="/movie/{{ movie.id }}"
 >
+
   <img
     mat-card-image
     src="https://image.tmdb.org/t/p/w500{{ movie?.poster_path }}"
-    alt=""
-  />
+    onerror="this.src='../../../assets/images/missingPicture.jpg'"
+    alt=""/>
+    
   <mat-card-content>
     <h6 class="movie-title">{{ movie?.title }}</h6>
   </mat-card-content>

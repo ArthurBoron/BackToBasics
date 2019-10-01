@@ -2,6 +2,7 @@
   <div class="image-card-container">
     <img
       src="https://image.tmdb.org/t/p/w500{{ movie?.profile_path }}"
+      onerror="this.src='../../../assets/images/missingPicture.jpg'"
       alt="{{ movie?.title }}"
     />
   </div>
