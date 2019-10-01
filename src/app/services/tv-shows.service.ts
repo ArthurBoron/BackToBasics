@@ -12,7 +12,8 @@ export class TvShowService {
   constructor(public http: HttpClient) { }
 
   getTrendingTvShows(page: number) {
-    return this.http.get(`${this.tvShowUrl}tv/on_the_air?api_key=${this.apiKey}&language=en-US&page=${page}`);
+    // tslint:disable-next-line: max-line-length
+    return this.http.get(`${this.tvShowUrl}discover/tv?api_key=${this.apiKey}&language=en-US&page=${page}&first_air_date.lte=1965-01-01`);
   }
 
   getTvShow(id: number) {
