@@ -6,6 +6,7 @@
   <img
     mat-card-image
     src="https://image.tmdb.org/t/p/w500{{ movie?.poster_path }}"
+    onerror="this.src='../../../assets/images/missingPicture.jpg'"
     alt=""
   />
   <mat-card-content>
