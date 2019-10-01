@@ -1,0 +1,28 @@
+.randInfo{
+    width: 100%;
+    bottom: 0;
+    position: fixed;
+    background-color: #bf7706;
+    text-align: center;
+    font-family: caviarDreams;
+    font-size: 2em;
+    height: 5%;
+}
+
+button,.closeAd{
+    text-decoration: none;
+    color: #f1e6d5;
+    background: none;
+    border: none;
+}
+
+button:hover,.closeAd:hover{
+    color: #392e1d;
+}
+
+button:focus {outline:0;}
+
+.closeAd{
+    position: fixed;
+    right: 1%;
+}
