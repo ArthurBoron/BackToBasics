@@ -26,3 +26,118 @@ button:focus {outline:0;}
     position: fixed;
     right: 1%;
 }
+
+.container {
+    margin-left: 6%;
+    margin-top:6%;
+    position: absolute;
+    background-color: black;
+  }
+  
+  
+  .image-card-container {
+    position: fixed;
+    right: 50%;
+    top: 10%;
+    height: 90%;
+  }
+  
+  .details-container {
+    width: 30%;
+    left: 50%;
+    position: fixed;
+  }
+  
+  img {
+    height: 100%;
+    object-fit: cover;
+  }
+  
+  .movie-title {
+    color: #bf7706;
+    margin-left: 1.1em;
+    display: inline-block;
+    font-size: 2.5em;
+    letter-spacing: 2px;
+    font-weight: 500;
+    font-family: caviarDreams;
+  }
+  
+  .overview {
+    color: #f1e6d5;
+    display: inline-table;
+    font-weight: 300;
+    margin-left: 2.9em;
+    margin-right: 1em;
+    font-size: 1em;
+  }
+  
+  .genres {
+    color: #bf7706;
+    display: inline-block;
+    font-weight: 300;
+    margin-left: 2em;
+    font-size: 1.4em;
+    font-family: caviarDreams;
+  }
+  
+  .release-details-container {
+    width: 500px;
+    height: 150px;
+  }
+  
+  .release-year-container {
+    color: #f1e6d5;
+    margin-left: 2em;
+    font-size: 1.4em;
+    float: left;
+    font-family: caviarDreams;
+  }
+  
+  .release-year {
+    color: #bf7706;
+    font-weight: 300;
+    font-size: 1.1em;
+    display: inline-block;
+    margin-top: 0.1em;
+  }
+  
+  .runtime-container {
+    color: #f1e6d5;
+    float: left;
+    margin-left: 9em;
+    font-size: 1.4em;
+    font-family: caviarDreams;
+  }
+  
+  .runtime {
+    color: #bf7706;
+    font-weight: 300;
+    margin-top: 0.1em;
+    display: inline-block;
+  }
+  
+  .cast-container {
+    color: #f1e6d5;
+    margin-left: 2em;
+    font-size: 1.4em;
+    display: inline-block;
+    margin-top: 1.3em;
+    font-family: caviarDreams;
+  }
+  
+  .cast {
+    color: #bf7706;
+    font-weight: 300;
+    font-size: 0.9em;
+  }
+  
+  .blackGrandiant{
+    background-image: url(../../../assets/images/blackGradient.png);
+    background-repeat: repeat-y;
+    height: 100%;
+    width: 100%;
+    left: 0;
+    top: 10%;
+    position: fixed;
+  }
