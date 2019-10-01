@@ -1,3 +1,14 @@
+<div class="genres">
+  <form name="selectGenre">
+  <select name="my_html_select_box"
+  (change)=routeGenre()>
+    <option>All genres</option>
+    <option
+    *ngFor="let genres of genres">{{genres?.name}} </option>  
+  </select>
+</form>
+</div>
+
 <mat-card
   class="movie-card"
   *ngFor="let movie of trendingMovies"
@@ -15,10 +26,10 @@
 
 <div class="container">
   <ul>
-      <li><a routerLink="/movie" [queryParams]="{page:'1'}">1</a></li>
-      <li><a routerLink="/movie" [queryParams]="{page:'2'}">2</a></li>
-      <li><a routerLink="/movie" [queryParams]="{page:'3'}">3</a></li>
-      <li><a routerLink="/movie" [queryParams]="{page:'4'}">4</a></li>
-      <li><a routerLink="/movie" [queryParams]="{page:'5'}">5</a></li>
+      <li><a (click)="goTop()" routerLink="/movie" [queryParams]="{page:'1'}">1</a></li>
+      <li><a (click)="goTop()" routerLink="/movie" [queryParams]="{page:'2'}">2</a></li>
+      <li><a (click)="goTop()" routerLink="/movie" [queryParams]="{page:'3'}">3</a></li>
+      <li><a (click)="goTop()" routerLink="/movie" [queryParams]="{page:'4'}">4</a></li>
+      <li><a (click)="goTop()" routerLink="/movie" [queryParams]="{page:'5'}">5</a></li>
   </ul>
 </div>

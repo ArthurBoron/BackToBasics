@@ -6,7 +6,7 @@
 .movie-card {
   width: 300px;
   display: inline-block;
-  margin: 7% 1em 1em 2em;
+  margin: 10% 1em 1em 2em;
 }
 
 .movie-card:hover {
@@ -36,6 +36,11 @@ h6{
   color: #bf7706;
   padding: 5px;
   text-decoration: none;
+}
+
+.genres {
+  position: absolute;
+  margin: 6% 0% 0% 0%;
 }
 
 
