@@ -61,13 +61,16 @@
 
 .state-container-dropdown {
   position: absolute;
-  top: 85%;
+  top: 76%;
+  margin-top: 3px;
   left: 30%;
   z-index: 1;
   width: 40%;
-  max-height: 300px;
+  max-height: 24%;
   background: #141414;
   overflow-y: auto;
+  font-weight: 300;
+  font-size: 2em;
 }
 
 .state {
@@ -75,9 +78,11 @@
   color: white;
   padding: 10px;
   display: block;
+  font-family: caviarDreams;
 }
 
 .state:hover {
-  background: #00fc87;
+  background: #bf7706;
+  color: #f1e6d5;
   cursor: pointer;
 }
