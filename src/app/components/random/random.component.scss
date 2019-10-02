@@ -6,7 +6,7 @@
     text-align: center;
     font-family: caviarDreams;
     font-size: 2em;
-    height: 5%;
+    // height: 5%;
 }
 
 button,.closeAd{
@@ -43,7 +43,7 @@ button:focus {outline:0;}
   }
   
   .details-container {
-    width: 30%;
+    width: 50%;
     left: 50%;
     position: fixed;
   }
@@ -70,6 +70,7 @@ button:focus {outline:0;}
     margin-left: 2.9em;
     margin-right: 1em;
     font-size: 1em;
+    text-align: justify;
   }
   
   .genres {
@@ -141,3 +142,22 @@ button:focus {outline:0;}
     top: 10%;
     position: fixed;
   }
+
+  .randomButton{
+      position: fixed;
+      border: solid;
+      font-family: caviardreams;
+      text-align: center;
+      font-size: 2em;
+      width: 10%;
+      left: 2%;
+      border-radius: 20px;
+  }
+
+  .randomButton:hover{
+      border-color: #bf7706;
+      color: #bf7706;
+      background-color: #f1e6d5;
+  }
+
+  

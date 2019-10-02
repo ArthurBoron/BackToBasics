@@ -1,4 +1,10 @@
 <div class="container">
+        <button (click)="randAgain()" class="randomButton">
+            Random
+            <br>
+            again!
+        </button>
+
         <div class="image-card-container">
           <img
             src="https://image.tmdb.org/t/p/w500{{ movie?.poster_path }}"
@@ -33,11 +39,11 @@
     <i class="material-icons">info</i>
     What the Random option consist in?
     </button>
-    <button class="closeAd" (click)="closeAd()"><a><i class="material-icons">close</i></a></button>
-    <br>
+    <button class="closeAd" (click)="reduceAd()"><i class="material-icons">close</i></button>
+    <!-- <br>
     Let the bobcat help you choose a movie that he considers as a basic!
     <br>
     Use this impressive feature by pressing the random button as much as you like! 
     <br>
-    <img class="randExpl" src="assets/images/bobcatRandom.png"/>
+    <img class="randExpl" src="assets/images/bobcatRandom.png"/> -->
 </div>

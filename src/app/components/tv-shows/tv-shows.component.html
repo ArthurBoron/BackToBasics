@@ -1,3 +1,4 @@
+<div class="list">
 <mat-card
   class="movie-card"
   *ngFor="let movie of trendingTvShows"
@@ -13,14 +14,15 @@
     <h6 class="movie-title">{{ movie?.name }}</h6>
   </mat-card-content>
 </mat-card>
+</div>
 
 <div class="container">
-  <ul>
-      <li><a routerLink="/tv" [queryParams]="{page:'1'}">1</a></li>
-      <li><a routerLink="/tv" [queryParams]="{page:'2'}">2</a></li>
-      <li><a routerLink="/tv" [queryParams]="{page:'3'}">3</a></li>
-      <li><a routerLink="/tv" [queryParams]="{page:'4'}">4</a></li>
-      <li><a routerLink="/tv" [queryParams]="{page:'5'}">5</a></li>
+  <ul class=pagesUl>
+      <li class="pagesLi"><button  class="pagesButtons" routerLink="/tv" [queryParams]="{page:'1'}">1</button></li>
+      <li class="pagesLi"><button  class="pagesButtons" routerLink="/tv" [queryParams]="{page:'2'}">2</button></li>
+      <li class="pagesLi"><button  class="pagesButtons" routerLink="/tv" [queryParams]="{page:'3'}">3</button></li>
+      <li class="pagesLi"><button  class="pagesButtons" routerLink="/tv" [queryParams]="{page:'4'}">4</button></li>
+      <li class="pagesLi"><button  class="pagesButtons" routerLink="/tv" [queryParams]="{page:'5'}">5</button></li>
   </ul>
 </div>
 

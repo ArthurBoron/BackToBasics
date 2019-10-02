@@ -4,9 +4,13 @@
 }
   
 .movie-card {
-  width: 17%;
+  width: 18%;
   display: inline-block;
-  margin: 10% 1em 1em 2em;
+  margin: 1% 1% 1% 1%;
+  border-style: solid;
+    border-color: #bf7706;
+    text-align: center;
+    font-family: caviardreams;
 }
 
 .movie-card:hover {
@@ -20,13 +24,14 @@ h6{
 
 .container {
   text-align: center;
+  padding-top: 1%;
 }
-.container ul {
-  border: 2px solid #bf7706;
-  display: inline-block;
-  margin: 10px 0;
-  padding: 2px;
-}
+ .container ul {
+//   border: 2px solid #bf7706;
+//   display: inline-block;
+//   margin: 10px 0;
+   padding: 2px;
+ }
 .container li {
   display: inline-block;
 }
@@ -43,4 +48,33 @@ h6{
   margin: 6% 0% 0% 0%;
 }
 
+.pagesButtons{
+	cursor: pointer;
+    border-radius: 100%;
+    border-color: #bf7706;
+    color: #bf7706;
+    font-weight: 300;
+    font-family: caviardreams;
+    background-color: #392e1d;
+    font-size: 2em;
+    width: 50px;
+}
 
+.pagesButtons:hover{
+  border-color: #f1e6d5;
+  color: #f1e6d5;
+  background-color: #bf7706;
+}
+
+.pagesButtons:focus{
+  outline: 0;
+}
+
+.pagesLi{
+ 	display: inline-block;
+    padding: 1%;
+}
+
+.list{
+  padding-top: 10%;
+}

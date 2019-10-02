@@ -36,12 +36,44 @@ export class RandomComponent implements OnInit {
 
   ngOnInit() {}
 
-  closeAd() {
-    document.getElementById('close').style.height = '0%';
-  }
 
   openAd() {
-    document.getElementById('close').style.height = '61%';
+    console.log('test');
+    // tslint:disable-next-line: max-line-length
+    document.getElementById('close').innerHTML += '<span id="toReduce"><br>Let the bobcat help you choose a movie that he considers as a basic!<br>Use this impressive feature by pressing the random button as much as you like!<br><img class="randExpl" src="assets/images/bobcatRandom.png"/></span>';
+  }
+
+  reduceAd() {
+    console.log('test');
+    // tslint:disable-next-line: max-line-length
+    //const elem = document.getElementById('toReduce');
+    //elem.remove();
+    console.log('test');
+    // this.removeElement('toReduce');
+  }
+
+  removeElement(elementId) {
+    // Removes an element from the document
+    const element = document.getElementById(elementId);
+    element.parentNode.removeChild(element);
+}
+
+  randAgain(){
+    this.randomService.getTrendingMovies(this.randomIntFromInterval(1, 7)).subscribe(data => {
+      const randomMovie = this.randomIntFromInterval(0, 19);
+      this.trendingMovies = data['results'][randomMovie];
+      this.randomService.getMovie(this.trendingMovies.id).subscribe(movie => {
+        this.movie = movie;
+        this.genres = this.movie.genres.map(el => el.name); // Getting the genre names and storing them in a new array
+        this.backgroundImg = this.movie.backdrop_path;
+      });
+  
+      this.randomService.getCredits(this.trendingMovies.id).subscribe(credits => {
+        this.credits = credits;
+        // tslint:disable-next-line:max-line-length
+        this.filteredCast = this.credits.cast.slice(0, 4).map(el => el.name); // Getting only the first 4 cast members and storing them in a new array
+      });
+    });
   }
 
   randomIntFromInterval(min, max) { // min and max included
