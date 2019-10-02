@@ -13,7 +13,7 @@ export class RandomService {
 
   getTrendingMovies(page: number) {
     // tslint:disable-next-line: max-line-length
-    return this.http.get(`${this.movieUrl}discover/movie?api_key=${this.apiKey}&language=en-US&page=${page}&primary_release_date.lte=2000-01-01&vote_average.gte=8.1&vote_count.gte=50`);
+    return this.http.get(`${this.movieUrl}discover/movie?api_key=${this.apiKey}&language=en-US&page=${page}&primary_release_date.lte=2000-01-01`);
   }
 
   getMovie(id: number) {

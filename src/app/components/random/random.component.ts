@@ -59,7 +59,7 @@ export class RandomComponent implements OnInit {
 }
 
   randAgain(){
-    this.randomService.getTrendingMovies(this.randomIntFromInterval(1, 7)).subscribe(data => {
+    this.randomService.getTrendingMovies(this.randomIntFromInterval(1, 15)).subscribe(data => {
       const randomMovie = this.randomIntFromInterval(0, 19);
       this.trendingMovies = data['results'][randomMovie];
       this.randomService.getMovie(this.trendingMovies.id).subscribe(movie => {
