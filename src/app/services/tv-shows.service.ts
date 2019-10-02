@@ -13,7 +13,7 @@ export class TvShowService {
 
   getTrendingTvShows(page: number) {
     // tslint:disable-next-line: max-line-length
-    return this.http.get(`${this.tvShowUrl}discover/tv?api_key=${this.apiKey}&language=en-US&page=${page}&first_air_date.lte=1965-01-01`);
+    return this.http.get(`${this.tvShowUrl}discover/tv?api_key=${this.apiKey}&language=en-US&page=${page}&first_air_date.lte=1980-01-01`);
   }
 
   getTvShow(id: number) {

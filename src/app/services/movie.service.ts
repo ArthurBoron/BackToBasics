@@ -18,7 +18,7 @@ export class MovieService {
   getTrendingMovies(page: number, genre: number) {
     if (genre === -1) {
       // tslint:disable-next-line: max-line-length
-      return this.http.get(`${this.movieUrl}discover/movie?api_key=${this.apiKey}&language=en-US&page=${page}&primary_release_date.lte=1965-01-01`);
+      return this.http.get(`${this.movieUrl}discover/movie?api_key=${this.apiKey}&language=en-US&page=${page}&primary_release_date.lte=2000-01-01`);
     } else {
       // tslint:disable-next-line: max-line-length
       return this.http.get(`${this.movieUrl}discover/movie?api_key=${this.apiKey}&language=en-US&page=${page}&with_genres=${genre}&primary_release_date.lte=1965-01-01`);
