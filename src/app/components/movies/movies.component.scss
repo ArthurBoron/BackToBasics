@@ -8,14 +8,19 @@
   display: inline-block;
   margin: 1% 1% 1% 1%;
   border-style: solid;
-    border-color: #bf7706;
-    text-align: center;
-    font-family: caviardreams;
+  border-color: #bf7706;
+  text-align: center;
+  font-family: caviardreams;
+  transition-property: all;
+  transition-duration: .1s; /* on aurait pu écrire 500ms également */
+  transition-timing-function: ease-in;
+  transition-delay: 0s;
 }
 
 .movie-card:hover {
   transform: scale(1.1);
   cursor: pointer;
+  border-color: #f1e6d5;
 }
 
 h6{
@@ -37,7 +42,7 @@ h6{
 }
 .container li a {
   display: inline-block;
-  background: white;
+  background: #f1e6d5;
   color: #bf7706;
   padding: 5px;
   text-decoration: none;
@@ -45,19 +50,21 @@ h6{
 
 .genres {
   position: absolute;
-  margin: 6% 0% 0% 0%;
+  top: 10%;
+  width: 100%;
+  height: 10%;
 }
 
 .pagesButtons{
 	cursor: pointer;
-    border-radius: 100%;
-    border-color: #bf7706;
-    color: #bf7706;
-    font-weight: 300;
-    font-family: caviardreams;
-    background-color: #392e1d;
-    font-size: 2em;
-    width: 50px;
+  border-radius: 100%;
+  border-color: #bf7706;
+  color: #bf7706;
+  font-weight: 300;
+  font-family: caviardreams;
+  background-color: #392e1d;
+  font-size: 2em;
+  width: 50px;
 }
 
 .pagesButtons:hover{
@@ -77,4 +84,31 @@ h6{
 
 .list{
   padding-top: 10%;
+}
+
+.allGenres{
+  text-align: center;
+  color: #bf7706;
+  background: none;
+  height: 100%; 
+  // width: 5%;
+  font-family: caviardreams;
+  padding: 10px;
+  margin: 0;
+  border: none;
+  font-size: 1vw;
+}
+
+.allGenres:focus{
+  outline:0;
+}
+
+.allGenres:hover{
+  color: #f1e6d5;
+}
+
+.uperContainer{
+  display: block;
+  transform: translate(0%, 50%);
+  text-align: center;
 }

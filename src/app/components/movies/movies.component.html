@@ -1,20 +1,19 @@
 <div class="genres">
-  <form name="selectGenre">
+  <!-- <form name="selectGenre">
   <select name="my_html_select_box"
   (change)=routeGenre()>
-    <option>All genres</option>
-    <option
-    *ngFor="let genres of genres">{{genres?.name}} </option>  
+  <option>All genres</option>
+  <option *ngFor="let genres of genres">{{genres?.name}} </option>  
   </select>
-</form>
+  </form> -->
+  <span class="uperContainer">
+<button class="allGenres">All Genres</button>
+<button *ngFor="let genres of genres" class="allGenres">{{genres?.name}}</button>
+</span>
 </div>
 
 <div class="list">
-<mat-card
-  class="movie-card"
-  *ngFor="let movie of trendingMovies"
-  routerLink="/movie/{{ movie.id }}"
->
+<mat-card class="movie-card" *ngFor="let movie of trendingMovies" routerLink="/movie/{{ movie.id }}">
 
   <img
     mat-card-image
