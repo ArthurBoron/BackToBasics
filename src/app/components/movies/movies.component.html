@@ -1,14 +1,7 @@
 <div class="genres">
-  <!-- <form name="selectGenre">
-  <select name="my_html_select_box"
-  (change)=routeGenre()>
-  <option>All genres</option>
-  <option *ngFor="let genres of genres">{{genres?.name}} </option>  
-  </select>
-  </form> -->
-  <span class="uperContainer">
-<button class="allGenres">All Genres</button>
-<button *ngFor="let genres of genres" class="allGenres">{{genres?.name}}</button>
+ <span class="uperContainer">
+<button (click)="routeGenre('All Genres')" class="allGenres">All Genres</button>
+<button (click)=routeGenre(genres?.name) *ngFor="let genres of genres" class="allGenres">{{genres?.name}}</button>
 </span>
 </div>
 
