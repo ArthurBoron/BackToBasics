@@ -18,4 +18,8 @@ export class ActorService {
   getActor(id: number) {
     return this.http.get(`${this.actorUrl}person/${id}?api_key=${this.apiKey}&language=en-US`);
   }
+
+  getMovieCredits(id: number) {
+    return this.http.get(`${this.actorUrl}person/${id}/movie_credits?api_key=${this.apiKey}&language=en-US`);
+  }
 }

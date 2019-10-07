@@ -1,20 +1,24 @@
 <div class="container">
   <div class="image-card-container">
     <img
-      src="https://image.tmdb.org/t/p/w500{{ movie?.profile_path }}"
+      src="https://image.tmdb.org/t/p/w500{{ actor?.profile_path }}"
       onerror="this.src='../../../assets/images/missingPicture.jpg'"
-      alt="{{ movie?.title }}"
+      alt="{{ actor?.title }}"
     />
   </div>
   <div class="details-container">
-    <h1 class="movie-title">{{ movie?.name }}</h1>
+    <h1 class="movie-title">{{ actor?.name }}</h1>
     <div class="release-details-container">
       <div class="release-year-container">
         Birthday: <br />
-        <span class="release-year">{{ movie?.birthday }}</span>
+        <span class="release-year">{{ actor?.birthday }}</span>
+      </div>
+      <div class="release-year-container">
+        Popular Movies: <br />
+        <span class="release-year">{{ credits?.join(', ') }}</span>
       </div>
     </div>
-    <p class="overview">{{ movie?.biography }}</p>
+    <p class="overview">{{ actor?.biography }}</p>
     
   </div>
 </div>
