@@ -1,19 +1,12 @@
 <div class="genres">
-  <form name="selectGenre">
-  <select name="my_html_select_box"
-  (change)=routeGenre()>
-    <option>All genres</option>
-    <option
-    *ngFor="let genres of genres">{{genres?.name}} </option>  
-  </select>
-</form>
+ <span class="uperContainer">
+<button (click)="routeGenre('All Genres')" class="allGenres">All Genres</button>
+<button (click)=routeGenre(genres?.name) *ngFor="let genres of genres" class="allGenres">{{genres?.name}}</button>
+</span>
 </div>
 
-<mat-card
-  class="movie-card"
-  *ngFor="let movie of trendingMovies"
-  routerLink="/movie/{{ movie.id }}"
->
+<div class="list">
+<mat-card class="movie-card" *ngFor="let movie of trendingMovies" routerLink="/movie/{{ movie.id }}">
 
   <img
     mat-card-image
@@ -25,13 +18,14 @@
     <h6 class="movie-title">{{ movie?.title }}</h6>
   </mat-card-content>
 </mat-card>
+</div>
 
 <div class="container">
-  <ul>
-      <li><button (click)=goTopAndChangePage(1)>1</button></li>
-      <li><button (click)=goTopAndChangePage(2)>2</button></li>
-      <li><button (click)=goTopAndChangePage(3)>3</button></li>
-      <li><button (click)=goTopAndChangePage(4)>4</button></li>
-      <li><button (click)=goTopAndChangePage(5)>5</button></li>
+  <ul class=pagesUl>
+      <li class="pagesLi"><button class="pagesButtons" (click)=goTopAndChangePage(1)>1</button></li>
+      <li class="pagesLi"><button class="pagesButtons" (click)=goTopAndChangePage(2)>2</button></li>
+      <li class="pagesLi"><button class="pagesButtons" (click)=goTopAndChangePage(3)>3</button></li>
+      <li class="pagesLi"><button class="pagesButtons" (click)=goTopAndChangePage(4)>4</button></li>
+      <li class="pagesLi"><button class="pagesButtons" (click)=goTopAndChangePage(5)>5</button></li>
   </ul>
 </div>

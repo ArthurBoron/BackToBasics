@@ -33,10 +33,7 @@ export class MoviesComponent implements OnInit {
     });
   }
 
-  routeGenre() {
-    const selectElem = document.getElementsByName('my_html_select_box') as unknown as HTMLElement;
-    const selectElemTest = selectElem[0].selectedIndex;
-    let valueOfSelected = selectElem[0][selectElemTest].innerHTML;
+  routeGenre(valueOfSelected: string) {
     if (valueOfSelected.endsWith(' ')) {
       valueOfSelected = valueOfSelected.substring(0, valueOfSelected.length - 1);
     }
@@ -65,7 +62,6 @@ export class MoviesComponent implements OnInit {
     window.scrollTo(0, 0);
     this.activeRoute.queryParams.subscribe(queryParams => {
       const genreChosen = this.getNameOfGenreDependingOnUrl();
-      console.log(genreChosen);
       this.router.navigate(['/movie'], { queryParams: { page: pageToJoin, genre: genreChosen }});
     });
   }
