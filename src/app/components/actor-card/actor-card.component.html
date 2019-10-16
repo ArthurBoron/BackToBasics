@@ -10,12 +10,12 @@
     <h1 class="movie-title">{{ actor?.name }}</h1>
     <div class="release-details-container">
       <div class="release-year-container">
-        Birthday: <br />
-        <span class="release-year">{{ actor?.birthday }}</span>
+        Birthday:<br />
+        <span class="release-year release-details">{{ actor?.birthday}}</span>
       </div>
       <div class="release-year-container">
         Popular Movies: <br />
-        <span class="release-year">{{ credits?.join(', ') }}</span>
+        <span class="release-year release-details">{{ credits?.join(', ') }}</span>
       </div>
     </div>
     <p class="overview">{{ actor?.biography }}</p>

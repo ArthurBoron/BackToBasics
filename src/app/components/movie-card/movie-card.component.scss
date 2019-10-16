@@ -17,6 +17,8 @@
   width: 50%;
   left: 50%;
   position: fixed;
+  overflow-y: auto;
+  height: 90%;
 }
 
 img {
@@ -42,6 +44,7 @@ img {
   margin-right: 1em;
   font-size: 1em;
   text-align: justify;
+  margin-top: 5%;
 }
 
 .genres {
@@ -53,63 +56,32 @@ img {
   font-family: caviarDreams;
 }
 
-.release-details-container {
-  width: 500px;
-  height: 150px;
-}
-
-.release-year-container {
-  color: #f1e6d5;
+.release-details-container{
+  width: 75%;
+  display: inline-block;
+  font-weight: 300;
   margin-left: 2em;
   font-size: 1.4em;
-  float: left;
   font-family: caviarDreams;
-}
-
-.release-year {
-  color: #bf7706;
-  font-weight: 300;
-  font-size: 1.1em;
-  display: inline-block;
-  margin-top: 0.1em;
-}
-
-.runtime-container {
   color: #f1e6d5;
-  float: left;
-  margin-left: 9em;
-  font-size: 1.4em;
-  font-family: caviarDreams;
 }
 
-.runtime {
+.release-details{
   color: #bf7706;
-  font-weight: 300;
-  margin-top: 0.1em;
+}
+
+.runtime-container, .language-container{
+  margin-left: auto;
+}
+
+.vote-container, .language-container{
+  margin-left: 6em;
+}
+
+.first-box, .second-box{
   display: inline-block;
 }
 
-.cast-container {
-  color: #f1e6d5;
-  margin-left: 2em;
-  font-size: 1.4em;
-  display: inline-block;
-  margin-top: 1.3em;
-  font-family: caviarDreams;
-}
-
-.cast {
-  color: #bf7706;
-  font-weight: 300;
-  font-size: 0.9em;
-}
-
-.blackGrandiant{
-  background-image: url(../../../assets/images/blackGradient.png);
-  background-repeat: repeat-y;
-  height: 100%;
-  width: 100%;
-  left: 0;
-  top: 10%;
-  position: fixed;
+.cast-container{
+  margin-top: 5%;
 }
