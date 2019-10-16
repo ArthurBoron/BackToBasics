@@ -8,12 +8,8 @@ import { ActorService } from 'src/app/services/actor.service';
   styleUrls: ['../movie-card/movie-card.component.scss']
 })
 export class ActorCardComponent implements OnInit {
-  movie: any;
+  actor: any;
   credits: any;
-  filteredCast: any;
-  genres: any;
-  imageUrl: 'https://image.tmdb.org/t/p/w500/';
-  backgroundImg: any;
 
   constructor(
     private router: ActivatedRoute,
@@ -24,10 +20,15 @@ export class ActorCardComponent implements OnInit {
     this.router.params.subscribe(params => {
       const id = params['movieID'];
 
-      this.actorService.getActor(id).subscribe(movie => {
-        this.movie = movie;
-        this.genres = this.movie.genres.map(el => el.name); // Getting the genre names and storing them in a new array
-        this.backgroundImg = this.movie.backdrop_path;
+      this.actorService.getActor(id).subscribe(actor => {
+        this.actor = actor;
+      });
+      this.actorService.getMovieCredits(id).subscribe(credits => {
+        const creditOfActor = credits['cast'];
+        // tslint:disable-next-line: only-arrow-functions
+        creditOfActor.sort(function(a, b) {return b.popularity - a.popularity; });
+        this.credits = creditOfActor.slice(0, 4).map(el => el.title);
+        console.log(this.credits);
       });
     });
   }

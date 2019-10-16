@@ -15,6 +15,7 @@ export class RandomComponent implements OnInit {
   backgroundImg: any;
   credits: any;
   filteredCast: any;
+  director: string;
 
   constructor(public http: HttpClient, public randomService: RandomService) {
     this.randomService.getTrendingMovies(this.randomIntFromInterval(1, 7)).subscribe(data => {
@@ -30,6 +31,7 @@ export class RandomComponent implements OnInit {
         this.credits = credits;
         // tslint:disable-next-line:max-line-length
         this.filteredCast = this.credits.cast.slice(0, 4).map(el => el.name); // Getting only the first 4 cast members and storing them in a new array
+        this.director = this.credits.crew[0].name;
       });
     });
    }
