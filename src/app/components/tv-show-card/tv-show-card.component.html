@@ -13,15 +13,15 @@
       <div class="release-details-container">
         <div class="release-year-container">
           Last Air Date: <br />
-          <span class="release-year">{{ movie?.last_air_date }}</span>
+          <span class="release-year release-details">{{ movie?.last_air_date }}</span>
         </div>
         <div class="runtime-container">
           Season: <br />
-          <span class="runtime">{{ movie?.number_of_seasons }}</span>
+          <span class="runtime release-details">{{ movie?.number_of_seasons }}</span>
         </div>
         <div class="cast-container">
           Cast: <br />
-          <span class="cast">{{ filteredCast?.join(', ') }}</span>
+          <span class="cast release-details">{{ filteredCast?.join(', ') }}</span>
         </div>
       </div>
     </div>

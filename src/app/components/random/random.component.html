@@ -14,36 +14,41 @@
   </div>
   <!-- <div class="blackGrandiant"></div> -->
   <div class="details-container">
-    <h1 class="movie-title">{{ movie?.title }}</h1>
-    <p class="overview">{{ movie?.overview }}</p>
-    <p class="genres">{{ genres?.join(', ') }}</p>
-    <div class="release-details-container">
-      <div class="release-year-container">
-        Release Date: <br />
-        <span class="release-year">{{ movie?.release_date }}</span>
-      </div>
-      <div class="runtime-container">
-        Runtime: <br />
-        <span class="runtime">{{ movie?.runtime }} mins</span>
-      </div>
-      <div class="release-year-container">
-        Vote Average: <br />
-        <span class="cast">{{ movie?.vote_average }}</span>
-      </div>
-      <div class="runtime-container">
-          Original Language: <br />
-          <span class="cast">{{ movie?.production_countries[0].name }}</span>
+      <h1 class="movie-title">{{ movie?.title }}</h1>
+      <p class="overview">{{ movie?.overview }}</p>
+      <p class="genres">{{ genres?.join(', ') }}</p>
+      <br>
+      <div class="release-details-container">
+          <div class="first-box">
+        <div class="release-year-container">
+          Release Date: <br />
+          <span class="release-year release-details">{{ movie?.release_date }}</span>
         </div>
         <div class="runtime-container">
-            Director: <br />
-            <span class="cast">{{ director }}</span>
+          Runtime: <br />
+          <span class="runtime release-details">{{ movie?.runtime }} mins</span>
+        </div>
+      </div>
+      <div class="second-box">
+        <div class="vote-container">
+          Vote Average: <br />
+          <span class="vote release-details">{{ movie?.vote_average }}</span>
+        </div>
+        <div class="language-container">
+            Original Language: <br />
+            <span class="language release-details">{{ movie?.production_countries[0].name }}</span>
           </div>
-      <div class="cast-container">
-          Cast: <br />
-          <span class="cast">{{ filteredCast?.join(', ') }}</span>
+        </div>
+        <div class="cast-container">
+            Cast: <br />
+            <span class="cast release-details">{{ filteredCast?.join(', ') }}</span>
+        </div>
+        <div class="director-container">
+          Director: <br />
+          <span class="director release-details">{{ director }}</span>
+        </div>
       </div>
     </div>
-  </div>
 </div>
 
 
