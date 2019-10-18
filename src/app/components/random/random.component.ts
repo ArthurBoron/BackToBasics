@@ -40,17 +40,17 @@ export class RandomComponent implements OnInit {
 
 
   openAd() {
-    console.log('test');
     // tslint:disable-next-line: max-line-length
-    document.getElementById('close').innerHTML += '<span id="toReduce"><br>Let the bobcat help you choose a movie that he considers as a basic!<br>Use this impressive feature by pressing the random button as much as you like!<br><img class="randExpl" src="assets/images/bobcatRandom.png"/></span>';
+    document.getElementById('openTab').innerHTML += '<span id="toReduce"><br>Let the bobcat help you choose a movie that he considers as a basic!<br>Use this impressive feature by pressing the random button as much as you like!<br><img class="randExpl" src="assets/images/bobcatRandom.png"/></span>';
   }
 
   reduceAd() {
-    console.log('test');
+    console.log('fyvgbuhi');
     // tslint:disable-next-line: max-line-length
-    //const elem = document.getElementById('toReduce');
-    //elem.remove();
-    console.log('test');
+    const elem = document.getElementById('close');
+    console.log(elem);
+    elem.remove();
+    
     // this.removeElement('toReduce');
   }
 
