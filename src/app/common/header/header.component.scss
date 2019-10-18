@@ -28,6 +28,7 @@ h5,
 h6 {
   margin: 8px 0;
   font-family: caviarDreams;
+  font-size: 2vw;
 }
 
 .backToHome:hover{
@@ -66,7 +67,7 @@ h6 {
   font-weight: 600;
   position: absolute;
   font-family: caviarDreams;
-  font-size: 2em;
+  font-size: 2vw;
   box-shadow: 0px 0px 10px 0px #000000;
 }
 
@@ -126,8 +127,9 @@ input{
 .titles {
   width: 50%;
   left: 50%;
-  transform: translate(-50%,0%);
-  position: absolute;
+  //transform: translate(-50%,0%);
+  //position: absolute;
+  text-align: center;
 }
 
 

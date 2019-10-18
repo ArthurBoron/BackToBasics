@@ -10,6 +10,8 @@ import { ActivatedRoute, Router } from '@angular/router';
 export class MoviesComponent implements OnInit {
   trendingMovies: any;
   genres: any;
+  window: any;
+  mybutton: any;
 
   constructor(private activeRoute: ActivatedRoute, private movieService: MovieService, private router: Router) {
       this.movieService.getTrendingMovies(1, -1).subscribe(data => {
@@ -22,6 +24,8 @@ export class MoviesComponent implements OnInit {
 
   ngOnInit() {
     this.activeRoute.queryParams.subscribe(queryParams => {
+      // const mybutton = document.getElementById("myTopBtn");
+      // this.window.onscroll = this.scrollFunction();
       this.movieService.getGenres().subscribe(data => {
         const genreName = this.getNameOfGenreDependingOnUrl();
         let genreId = -1;
@@ -57,6 +61,21 @@ export class MoviesComponent implements OnInit {
     });
     return id;
   }
+
+  //   scrollFunction(){
+  //   if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+  //     this.mybutton.style.display = 'block';
+  //   } else {
+  //     this.mybutton.style.display = 'none';
+  //   }
+  // }
+
+  // topFunction() {
+  //   document.body.scrollTop = 0;
+  //   document.documentElement.scrollTop = 0;
+  // }
+
+
 
   goTopAndChangePage(pageToJoin: number) {
     window.scrollTo(0, 0);
