@@ -26,7 +26,7 @@ export class RandomComponent implements OnInit {
         this.genres = this.movie.genres.map(el => el.name); // Getting the genre names and storing them in a new array
         this.backgroundImg = this.movie.backdrop_path;
       });
-  
+
       this.randomService.getCredits(this.trendingMovies.id).subscribe(credits => {
         this.credits = credits;
         // tslint:disable-next-line:max-line-length
@@ -50,17 +50,9 @@ export class RandomComponent implements OnInit {
     const elem = document.getElementById('close');
     console.log(elem);
     elem.remove();
-    
-    // this.removeElement('toReduce');
   }
 
-  removeElement(elementId) {
-    // Removes an element from the document
-    const element = document.getElementById(elementId);
-    element.parentNode.removeChild(element);
-}
-
-  randAgain(){
+  randAgain() {
     this.randomService.getTrendingMovies(this.randomIntFromInterval(1, 15)).subscribe(data => {
       const randomMovie = this.randomIntFromInterval(0, 19);
       this.trendingMovies = data['results'][randomMovie];
@@ -69,7 +61,6 @@ export class RandomComponent implements OnInit {
         this.genres = this.movie.genres.map(el => el.name); // Getting the genre names and storing them in a new array
         this.backgroundImg = this.movie.backdrop_path;
       });
-  
       this.randomService.getCredits(this.trendingMovies.id).subscribe(credits => {
         this.credits = credits;
         // tslint:disable-next-line:max-line-length
