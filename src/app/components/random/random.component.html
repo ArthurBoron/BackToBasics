@@ -12,7 +12,7 @@
       alt="{{ movie?.title }}"
     />
   </div>
-  <!-- <div class="blackGrandiant"></div> -->
+
   <div class="details-container">
       <h1 class="movie-title">{{ movie?.title }}</h1>
       <p class="overview">{{ movie?.overview }}</p>
@@ -54,15 +54,9 @@
 
 <div class='randInfo' id=close>
     <button (click)="openAd()" class=openAd>
-    <i class="material-icons">info</i>
+    <em class="material-icons">info</em>
     What the Random option consist in?
     </button>
-    <button class="closeAd" (click)="reduceAd()"><i class="material-icons">close</i></button>
+    <button class="closeAd" (click)="reduceAd()"><em class="material-icons">close</em></button>
     <span id=openTab></span>
-    <!-- <br>
-    Let the bobcat help you choose a movie that he considers as a basic!
-    <br>
-    Use this impressive feature by pressing the random button as much as you like! 
-    <br>
-    <img class="randExpl" src="assets/images/bobcatRandom.png"/> -->
 </div>
